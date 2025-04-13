@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextjs-app
+  labels:
+    app: nextjs-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nextjs-app
+  template:
+    metadata:
+      labels:
+        app: nextjs-app
+    spec:
+      containers:
+      - name: nextjs-app
+        image: ${CI_REGISTRY_IMAGE}:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: NEXT_PUBLIC_API_URL
+          valueFrom:
+            secretKeyRef:
+              name: nextjs-app-secrets
+              key: NEXT_PUBLIC_API_URL
+        - name: NEXT_PUBLIC_WEBSOCKET_URL
+          valueFrom:
+            secretKeyRef:
+              name: nextjs-app-secrets
+              key: NEXT_PUBLIC_WEBSOCKET_URL
+        - name: NEXT_PUBLIC_MQTT_URL
+          valueFrom:
+            secretKeyRef:
+              name: nextjs-app-secrets
+              key: NEXT_PUBLIC_MQTT_URL
+        - name: NEXT_PUBLIC_MQTT_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: nextjs-app-secrets
+              key: NEXT_PUBLIC_MQTT_USERNAME
+        - name: NEXT_PUBLIC_MQTT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: nextjs-app-secrets
+              key: NEXT_PUBLIC_MQTT_PASSWORD
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "512Mi"
+          requests:
+            cpu: "0.2"
+            memory: "256Mi"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5

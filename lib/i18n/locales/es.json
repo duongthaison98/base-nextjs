@@ -1,0 +1,55 @@
+{
+  "common": {
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "table": "Ejemplo de Tabla",
+    "form": "Ejemplo de Formulario",
+    "loading": "Cargando...",
+    "submit": "Enviar",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "view": "Ver",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Ordenar",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  },
+  "auth": {
+    "signIn": "Iniciar Sesión",
+    "signOut": "Cerrar Sesión",
+    "email": "Correo Electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidó su Contraseña?",
+    "noAccount": "¿No tiene una cuenta?",
+    "signUp": "Registrarse",
+    "hasAccount": "¿Ya tiene una cuenta?",
+    "privateRouteMessage": "Debe iniciar sesión para ver esta página"
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "role": "Rol",
+    "bio": "Biografía",
+    "notifications": "Notificaciones por Correo",
+    "dateRange": "Rango de Fechas",
+    "time": "Hora",
+    "language": "Idioma",
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Por favor ingrese un correo electrónico válido",
+    "success": "Formulario enviado con éxito",
+    "successDescription": "Su información ha sido guardada"
+  },
+  "dashboard": {
+    "overview": "Resumen",
+    "analytics": "Analíticas",
+    "reports": "Informes",
+    "totalRevenue": "Ingresos Totales",
+    "subscriptions": "Suscripciones",
+    "sales": "Ventas",
+    "activeNow": "Activos Ahora",
+    "recentSales": "Ventas Recientes"
+  }
+}

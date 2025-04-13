@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL}
+      - NEXT_PUBLIC_WEBSOCKET_URL=${NEXT_PUBLIC_WEBSOCKET_URL}
+      - NEXT_PUBLIC_MQTT_URL=${NEXT_PUBLIC_MQTT_URL}
+      - NEXT_PUBLIC_MQTT_USERNAME=${NEXT_PUBLIC_MQTT_USERNAME}
+      - NEXT_PUBLIC_MQTT_PASSWORD=${NEXT_PUBLIC_MQTT_PASSWORD}
+    command: npm run dev
+
+  # Add a mock API service for development
+  mock-api:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./mock-api:/app
+    ports:
+      - "3001:3001"
+    command: >
+      sh -c "npm install -g json-server && json-server --watch db.json --port 3001 --host 0.0.0.0"

@@ -1,0 +1,52 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "admin"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "name": "Bob Johnson",
+      "email": "bob@example.com",
+      "role": "manager"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Welcome",
+      "message": "Welcome to the application!",
+      "type": "info",
+      "read": false,
+      "timestamp": 1649012345678
+    },
+    {
+      "id": "2",
+      "title": "New Feature",
+      "message": "We've added a new feature to the application.",
+      "type": "success",
+      "read": false,
+      "timestamp": 1649012345679
+    }
+  ],
+  "auth": {
+    "login": {
+      "token": "mock-token",
+      "refreshToken": "mock-refresh-token",
+      "user": {
+        "id": "1",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "role": "admin"
+      }
+    }
+  }
+}

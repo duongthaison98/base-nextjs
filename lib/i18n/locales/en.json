@@ -1,0 +1,55 @@
+{
+  "common": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "table": "Table Example",
+    "form": "Form Example",
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot Password?",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "hasAccount": "Already have an account?",
+    "privateRouteMessage": "You need to be logged in to view this page"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "bio": "Bio",
+    "notifications": "Email Notifications",
+    "dateRange": "Date Range",
+    "time": "Time",
+    "language": "Language",
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "success": "Form submitted successfully",
+    "successDescription": "Your information has been saved"
+  },
+  "dashboard": {
+    "overview": "Overview",
+    "analytics": "Analytics",
+    "reports": "Reports",
+    "totalRevenue": "Total Revenue",
+    "subscriptions": "Subscriptions",
+    "sales": "Sales",
+    "activeNow": "Active Now",
+    "recentSales": "Recent Sales"
+  }
+}
